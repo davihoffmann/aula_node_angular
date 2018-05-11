@@ -1,0 +1,22 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "aula node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fxsobr/aula_node_angular.git"
+  },
+  "author": "Marcelo Ceolin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fxsobr/aula_node_angular/issues"
+  },
+  "homepage": "https://github.com/fxsobr/aula_node_angular#readme",
+  "dependencies": {
+    "exif": "^0.6.0"
+  }
+}

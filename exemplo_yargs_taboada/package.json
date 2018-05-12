@@ -1,0 +1,14 @@
+{
+  "name": "exemplo_yargs_taboada",
+  "version": "1.0.0",
+  "description": "exemplo taboada",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcelo Ceolin e Davi Prada Hoffmann",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^11.0.0"
+  }
+}

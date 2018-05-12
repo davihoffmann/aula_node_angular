@@ -1,5 +1,7 @@
 <ul>
-  <li *ngFor="let i of lista">
-    {{i.nome}}
+  <li *ngFor="let item of lista">
+     {{item.nome}}
   </li>
 </ul>
+Nome:<input type="text" [(ngModel)]="nome" />
+<button (click)="inserir()" >Inserir</button>

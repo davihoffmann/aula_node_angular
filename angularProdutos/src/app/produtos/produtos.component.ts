@@ -8,26 +8,32 @@ import { ProdutosService } from '../produtos.service';
 })
 export class ProdutosComponent implements OnInit {
 
+
+  nome = "";
   lista = [];
   colecao:String;
 
   constructor(public produtoService:ProdutosService) {}
 
-  private t = 0;
-  
 
   ngOnInit() {
-    //this.colecao = this.produtoService.colecao;
-    this.atualiza();
-
-   setInterval(()=>this.t++,1000);
+    this.buscaProdutos();
   }
 
-  atualiza() {
-    this.produtoService.getAll().then(dados => {
-      this.lista = dados;
-    })
+  buscaProdutos(){
+    this.produtoService.consulta().then(
+      produtos => {
+        this.lista = produtos;
+      }
+    );
   }
-  
+
+  inserir() {
+    this.produtoService.inserir(this.nome)
+    .then(()=>{
+      this.nome="";
+      this.buscaProdutos();
+    });
+  }
 
 }

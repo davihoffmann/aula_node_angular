@@ -7,17 +7,21 @@ export class ProdutosService {
 
   constructor(private http:Http) { }
 
-  errorHandler = error => console.error('Service error', error);
-
 
   public baseUrl = 'http://localhost:3000';
 
   public colecao="produtos";
 
 
-  getAll(): Promise<any> {
-    return this.http.get(`${this.baseUrl}/${this.colecao}`)
-      .toPromise().then(response => response.json())
-      .catch(this.errorHandler);
+  consulta() {
+    return this.http.get("http://localhost:3000/produtos")
+    .toPromise().then(resposta=>resposta.json());
   }
+
+  inserir(nome:string){
+    return this.http.post("http://localhost:3000/produtos",
+    {nome:nome})
+    .toPromise().then(resposta=>resposta.json());
+  }
+
 }

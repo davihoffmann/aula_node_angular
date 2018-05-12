@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let item of lista">
+     {{item.nome}} - {{item.nomeProfessor}}
+     <button (click)="excluirDisciplina(item.id)">Remover</button>
+  </li>
+</ul>
+Nome:<input type="text" [(ngModel)]="nome" />
+Nome do professor:<input type="text" [(ngModel)]="nomeProfessor" />
+<button (click)="inserirDisciplina()" >Inserir</button>

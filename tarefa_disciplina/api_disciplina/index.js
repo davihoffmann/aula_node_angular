@@ -20,19 +20,20 @@ app.get(`/${disciplinas.colecao}/:id`, (req, res) => {
 
 
 app.post(`/${disciplinas.colecao}`, (req, res) => {
-    res.send(disciplinas.adiciona({ id: null, nome: req.body.nome }));
+    res.send(disciplinas.adiciona({ id: null, nome: req.body.nome, nomeProfessor: req.body.nomeProfessor }));
 });
 
 app.put(`/${disciplinas.colecao}/:id`, (req, res) => {
-    res.send(disciplinas.altera({ id: req.params.id, nome: req.body.nome }));
+    res.send(disciplinas.altera({ id: req.params.id, nome: req.body.nome, nomeProfessor: req.body.nomeProfessor }));
 });
 
 app.put(`/${disciplinas.colecao}`, (req, res) => {
-    res.send(disciplinas.altera({ id: req.body.id, nome: req.body.nome }));
+    res.send(disciplinas.altera({ id: req.body.id, nome: req.body.nome, nomeProfessor: req.body.nomeProfessor }));
 });
 
 
 app.delete(`/${disciplinas.colecao}/:id`, (req, res) => {
+    console.log(req.params.id);
     res.send(disciplinas.remove(req.params.id));
 });
 

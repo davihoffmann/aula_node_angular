@@ -44,4 +44,10 @@ export class CrudDisciplinaComponent implements OnInit {
     });
   }
 
+  altera(disciplina) {
+    this.disciplinaService.alterar(disciplina).then(dados => {
+      this.buscaDisciplinas();
+    });
+  }
+
 }

@@ -1,6 +1,7 @@
 <ul>
   <li *ngFor="let item of lista">
      {{item.nome}} - {{item.nomeProfessor}}
+     <button (click)="altera(item)">Alterar</button>
      <button (click)="excluirDisciplina(item.id)">Remover</button>
   </li>
 </ul>
